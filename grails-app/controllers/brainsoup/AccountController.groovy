@@ -26,7 +26,7 @@ class AccountController {
             flash.message = "Hallo, ${Account.username}! (Zuletzt eingeloggt: ${d}) "
             Account.setActive(true)
             Account.save()
-            redirect(controller:"member", action:"profile")
+            redirect(controller:"member", action:"index")
         }else{
             flash.message = "Entschuldigung, ${params.username}. Versuche es nocheinmal."
             redirect(action:"login")        //normal: action:"login"
@@ -34,10 +34,15 @@ class AccountController {
     }
 
     def logout = {
-        flash.message = "Goodbye ${session.Account.username}"
-        //session.Account.setActive(false);
-        session.Account = null;
-        redirect(controller:"account", action:"login")
+        if(session == null){
+            redirect(controller:"account", action:"login")
+        }
+        if(session.Account != null) {
+            flash.message = "Goodbye ${session.Account.username}"
+            //session.Account.setActive(false);
+            session.Account = null;
+            redirect(controller: "account", action: "login")
+        }
     }
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
