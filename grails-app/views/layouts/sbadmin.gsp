@@ -55,7 +55,7 @@
 	</div>
 	<div style="float: left;" class="log_header">
 
-		<g:form action="authenticate" method="post" >
+		<g:form url="[action:'authenticate',controller:'account']" method="post" >
 			<div class="log_header">
 					<label for="username">Username:</label>
 					<input type="text" id="username" name="username"/>
@@ -82,7 +82,7 @@
 					</li>
 					<li class="divider"></li>
 					<li>
-						<a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
+						<a href="${createLink(action: 'logout', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
 					</li>
 				</ul>
 			</li>
