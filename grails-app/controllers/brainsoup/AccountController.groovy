@@ -3,6 +3,8 @@ package brainsoup
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
+import org.codehaus.groovy.grails.web.util.WebUtils
+
 @Transactional(readOnly = true)
 class AccountController {
 
@@ -18,13 +20,13 @@ class AccountController {
         def Account = Account.findByUsernameAndPassword(params.username, params.password)
 
         if(Account){
+
             java.util.Date d = new java.util.Date(session.getLastAccessedTime())
             session.Account = Account;
             flash.message = "Hallo, ${Account.username}! (Zuletzt eingeloggt: ${d}) "
             Account.setActive(true)
             Account.save()
-
-            redirect(controller:"account", action:"index")
+            redirect(controller:"member", action:"profile")
         }else{
             flash.message = "Entschuldigung, ${params.username}. Versuche es nocheinmal."
             redirect(action:"login")        //normal: action:"login"
@@ -46,13 +48,15 @@ class AccountController {
     }
 
     def show(Account accountInstance) {
+        flash.message = "Profil von ${session.Account.username}"
         respond accountInstance
     }
 
     def create(){
-        def newAccount =  new Account(params)
-        newAccount.save()
-        redirect(controller:"member", action:"create")
+        //session.Member.user = respond Project(params)
+        respond new Account(params)
+
+        //redirect(controller:"member", action:"index")
     }
 
     @Transactional

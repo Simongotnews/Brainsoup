@@ -10,6 +10,19 @@ class MemberController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def bind(Account accountInstance){
+        def newMember = new Member(params)
+        newMember.setUser(session.Account)
+        //newMember.save()
+        def currentAccount = new Account()
+        session["user"] = currentAccount
+        respond newMember
+    }
+
+    def profile() {
+        show(session.member)
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Member.list(params), model:[memberInstanceCount: Member.count()]
@@ -20,12 +33,13 @@ class MemberController {
     }
 
     def create() {
-        def newMember = new Member(params)
-        newMember.setUser(session.getAttribute("user"))
+        //def newMember = new Member(params)
+        //newMember.setUser(session.getAttribute("user"))
         //newMember.save()
-        def currentAccount = new Account()
-        session["user"] = currentAccount
-        respond newMember
+        //def currentAccount = new Account()
+        //session["user"] = currentAccount
+        //respond newMember
+        respond new Project(params)
     }
 
     @Transactional

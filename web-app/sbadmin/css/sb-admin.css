@@ -28,6 +28,10 @@ body {
 }
 
 /*          Geaendert      */
+.bild_header {
+    padding: 5px;
+}
+
 .log_header {
     padding-left: 20px;
     padding-top: 5px;

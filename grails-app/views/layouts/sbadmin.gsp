@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>SB Admin - Bootstrap Admin Template</title>
+	<title>Brainsoup</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="${request.contextPath}/sbadmin/css/bootstrap.min.css" rel="stylesheet">
@@ -36,6 +36,11 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
+<!-- veraendert -->
+
+			<img style="padding-top: 10px"  href="${createLink(action: 'member', controller:'profile')}" src="${request.contextPath}/sbadmin/images/Brainsoup_LOGO_25x44.png" alt="Logo">
+
+<!--    		-->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 				<span class="sr-only">Toggle navigation</span>
@@ -43,42 +48,44 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="index.html">Brainsoup</a>
+			<a class="navbar-brand" href="${createLink(action: 'profile', controller:'member')}">Brainsoup</a>
 		</div>
 		<!-- Top Menu Items -->
 		<ul class="nav navbar-right top-nav">
 <!-- 																																							-->
-	<div class="log_header">
-		<g:if test="${flash.message}">
-			<div class="message">${flash.message}</div>
-		</g:if>
-	</div>
 	<div style="float: left;" class="log_header">
-
-		<g:form url="[action:'authenticate',controller:'account']" method="post" >
-			<div class="log_header">
+		<g:if test="${session.Account == null}">
+			<g:form url="[action:'authenticate',controller:'account']" method="post" >
+				<div class="log_header">
 					<label for="username">Username:</label>
 					<input type="text" id="username" name="username"/>
 					<label for="password">Password:</label>
 					<input type="password" id="password" name="password"/>
-				<span class="button" style="padding-left: 10px; padding-top: 5px;">
-					<input class="save" type="submit" value="Einloggen" />
+					<span class="button" style="padding-left: 10px; padding-top: 5px;">
+						<input class="save" type="submit" value="Einloggen" />
+					</span>
+				</div>
+			</g:form>
+		</g:if>
+		<g:if test="${session.Account != null}">
+				<div class="log_header">
+					<label style="font-family: 'Comic Sans MS'; font-size: 10em; font-size: large; color: red">Hallo ${session.Account.username} :)  </label>
 				</span>
 			</div>
-		</g:form>
+		</g:if>
 	</div>
 <!-- 																																						-->
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Menu <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="#"><i class="fa fa-fw fa-user"></i> MyStuff </a>
+						<a href="#"><i class="fa fa-fw fa-user"></i> Profile </a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-fw fa-envelope"></i> FriendStuff </a>
+						<a href="#"><i class="fa fa-fw fa-envelope"></i> News </a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-fw fa-gear"></i> Account </a>
+						<a href="#"><i class="fa fa-fw fa-gear"></i> Settings </a>
 					</li>
 					<li class="divider"></li>
 					<li>
@@ -91,19 +98,16 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav side-nav">
 				<li>
-					<a href="../account/index.html"><i class="fa fa-fw fa-dashboard"></i> Account</a>
+					<a href="${createLink(action: 'index', controller:'account')}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 				</li>
 				<li>
-					<a href="../member/index.html"><i class="fa fa-fw fa-bar-chart-o"></i> Member</a>
+					<a href="${createLink(action: 'index', controller:'project')}"><i class="fa fa-fw fa-table"></i> Projects</a>
 				</li>
 				<li>
-					<a href="../project/index.html"><i class="fa fa-fw fa-table"></i> Project</a>
+					<a href="${createLink(action: 'create', controller:'project')}"><i class="fa fa-fw fa-edit"></i> new Project</a>
 				</li>
-				<li>
-					<a href="../projectPage/index.html"><i class="fa fa-fw fa-edit"></i> ProjectPage</a>
-				</li>
-				<li>
-					<a href="../rating/index.html"><i class="fa fa-fw fa-desktop"></i> Rating</a>
+				<li>		<!-- fa fa-fw fa-bar-chart-o für Chartdiagramm -->
+					<a href="${createLink(action: 'logout', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
 				</li>
 
 				<!--
@@ -134,7 +138,10 @@
 	</nav>
 
 	<div id="page-wrapper">
+		<g:if test="${session}">
+			BHSKHDKHDKSHDKHKSHDKHSKDHSKHHSDKHKSDHKS EMPTYY
 			<g:layoutBody/>
+		</g:if>
 	</div>
 	<!-- /#page-wrapper -->
 
