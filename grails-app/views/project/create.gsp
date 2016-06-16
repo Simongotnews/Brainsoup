@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="sbadmins">
+		<meta name="layout" content="sbadmin">
 		<g:set var="entityName" value="${message(code: 'project.label', default: 'Project')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
