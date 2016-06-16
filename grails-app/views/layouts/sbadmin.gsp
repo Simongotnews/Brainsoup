@@ -57,15 +57,10 @@
 
 		<g:form action="authenticate" method="post" >
 			<div class="log_header">
-
 					<label for="username">Username:</label>
-
 					<input type="text" id="username" name="username"/>
-
 					<label for="password">Password:</label>
-
 					<input type="password" id="password" name="password"/>
-
 				<span class="button" style="padding-left: 10px; padding-top: 5px;">
 					<input class="save" type="submit" value="Einloggen" />
 				</span>
@@ -87,7 +82,7 @@
 					</li>
 					<li class="divider"></li>
 					<li>
-						<a href="${createLink(action:'logout', controller:'Account')}"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
+						<a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
 					</li>
 				</ul>
 			</li>
