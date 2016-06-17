@@ -19,7 +19,10 @@ class LoginController {
         }
     }
     def logout ={
-        session.user=null
-        redirect(action:'index')
+        if(session.Account != null)
+        {
+            session.user=null
+            redirect(action:'doLogin', controller: 'login')
+        }
     }
 }
