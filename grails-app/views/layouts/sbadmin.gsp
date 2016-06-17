@@ -109,7 +109,9 @@
 					<a href="${createLink(action: 'create', controller:'project')}"><i class="fa fa-fw fa-edit"></i> new Project</a>
 				</li>
 				<li>		<!-- fa fa-fw fa-bar-chart-o für Chartdiagramm -->
-					<a href="${createLink(action: 'logout', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+					<g:if test="${session.Account != null}">
+						<a href="${createLink(action: 'logout', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+					</g:if>
 				</li>
 
 				<!--
@@ -140,9 +142,11 @@
 	</nav>
 
 	<div id="page-wrapper">
-		<g:if test="${session}">
-			BHSKHDKHDKSHDKHKSHDKHSKDHSKHHSDKHKSDHKS EMPTYY
+		<g:if test="${session.Account != null}">
 			<g:layoutBody/>
+		</g:if>
+		<g:if test="${session.Account == null}">
+			<a href="${createLink(action: 'doLogin', controller:'login')}">Sorry you need to be logged in!</a>
 		</g:if>
 	</div>
 	<!-- /#page-wrapper -->
