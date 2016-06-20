@@ -10,7 +10,7 @@ class LoginController {
         def user = Account.findWhere(username:params['username'],password:params['password'])
         session.Account = user
         if (user){
-            redirect(controller:'login',action:'index')
+            redirect(controller:'member',action:'profile')
             flash.message = "Login erfolgreich"
         }
         else{

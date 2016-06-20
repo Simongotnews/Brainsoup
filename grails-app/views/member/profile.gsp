@@ -37,7 +37,7 @@
             <g:each in="${session.Project}" status="i" var="projects">
                 <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-                    <td><g:link action="show" id="${session.Member.Project.id}">${fieldValue(bean: projects, field: "title")}</g:link></td>
+                    <td><g:link controller="project" action="show" id="${projects.id}">${fieldValue(bean: project, field: "name")}</g:link></td>
 
                     <td>${fieldValue(bean: projects, field: "name")}</td>
 

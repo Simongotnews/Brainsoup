@@ -69,7 +69,7 @@
 		</g:if>
 		<g:if test="${session.Account != null}">
 				<div class="log_header">
-					<label style="font-family: 'Comic Sans MS'; font-size: 10em; font-size: large; color: red">Hallo ${session.Account.username} :)    </label>
+					<a href="${createLink(action: 'profile', controller: 'member')}"><label style="font-size: 10em; font-size: large; color: grey">Hallo ${session.Account.username} :)</label></a>
 				</span>
 			</div>
 		</g:if>
@@ -100,17 +100,17 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav side-nav">
 				<li>
-					<a href="${createLink(action: 'index', controller:'account')}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+					<a href="${request.contextPath}/"><i class="fa fa-fw fa-dashboard"></i> Dashboard </a>
 				</li>
 				<li>
-					<a href="${createLink(action: 'index', controller:'project')}"><i class="fa fa-fw fa-table"></i> Projects</a>
+					<a href="${createLink(action: 'index', controller:'project')}"><i class="fa fa-fw fa-table"></i> Projects </a>
 				</li>
 				<li>
-					<a href="${createLink(action: 'create', controller:'project')}"><i class="fa fa-fw fa-edit"></i> new Project</a>
+					<a href="${createLink(action: 'create', controller:'project')}"><i class="fa fa-fw fa-edit"></i> new Project </a>
 				</li>
 				<li>		<!-- fa fa-fw fa-bar-chart-o für Chartdiagramm -->
 					<g:if test="${session.Account != null}">
-						<a href="${createLink(action: 'logout', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+						<a href="${createLink(action: 'logout', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
 					</g:if>
 				</li>
 

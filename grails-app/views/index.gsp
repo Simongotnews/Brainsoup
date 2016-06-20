@@ -1,7 +1,9 @@
+<%@ page import="brainsoup.Project" %>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="sbadmin"/>
+		<meta name="layout" content="sbadmin">
+		<g:set var="entityName" value="${message(code: 'project.label', default: 'Project')}" />
 		<title>Brainsoup</title>
 		<style type="text/css" media="screen">
 			#status {
@@ -94,22 +96,27 @@
 		<a href="${createLink(action: 'index', controller: 'project')}"></br><h1> My Projects </h1></a>
 		</ul>
 		<ul>
-			<g:each var="project" in="${session.Project}">
+			<g:each var="project" in="${Project.findAllByMember(session.Member)}">
 				<li>${project.name} - ${project.genre}</li>
 			</g:each>
+
 		</ul>
 	</div>
 </g:if>
 <div id="page-body" role="main">
 	<h1>Welcome at Brainsoup</h1>
-	<p>You can create your Project an discover other ones.</p>
+	<p>You can create your Project and discover other ones.</p>
 
 	<div id="controller-list" role="navigation">
-		<h2>Available Controllers:</h2>
+		<h2>Other Projects:</h2>
 		<ul>
-			<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-				<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-			</g:each>
+			<table>
+				<tbody>
+				<g:each var="project" in="${Project.findAll()}">
+					<li><g:link controller="project" action="show" id="${project.id}"> ${project.name} (${project.genre}) </g:link></li>
+				</g:each>
+				</tbody>
+			</table>
 		</ul>
 	</div>
 </div>

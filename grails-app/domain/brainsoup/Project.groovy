@@ -19,13 +19,13 @@ class Project {
     }
 
     String toString() {
-        return "$name $genre $rating"
+        return "$name (Genre:$genre Rating:$rating)"
     }
 
     static constraints = {
         name(blank:false, matches: "[a-zA-Z]+")
         rating(blank:false)
-        shortDescription(blank:false)
+        shortDescription(blank:false, maxSize: 50)
         genre(blank:false)
         recension(blank:false)
         written(nullable:true, max:new java.util.Date())
