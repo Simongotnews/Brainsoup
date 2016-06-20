@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0c47b41-f2c7-4b92-91f1-cf3ce81e3f99" name="Default" comment="">
+    <list default="true" id="d0c47b41-f2c7-4b92-91f1-cf3ce81e3f99" name="Default" comment="Logout und Authenticat von ueberall&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/Account$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/Account$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/Account.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/Account.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$__tt__delete_closure15$_closure22.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$__tt__delete_closure15$_closure22.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$__tt__delete_closure15$_closure23.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$__tt__delete_closure15$_closure23.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$__tt__delete_closure15.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$__tt__delete_closure15.class" />
@@ -21,32 +19,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$_notFound_closure12$_closure17.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$_notFound_closure12$_closure17.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$_notFound_closure12.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/AccountController$_notFound_closure12.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/AccountController.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/MemberController.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/MemberController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__delete_closure11$_closure18.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__delete_closure11$_closure18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__delete_closure11$_closure19.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__delete_closure11$_closure19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__delete_closure11.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__delete_closure11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__save_closure9$_closure14.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__save_closure9$_closure14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__save_closure9$_closure15.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__save_closure9$_closure15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__save_closure9.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__save_closure9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__update_closure10$_closure16.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__update_closure10$_closure16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__update_closure10$_closure17.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__update_closure10$_closure17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__update_closure10.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$__tt__update_closure10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$_notFound_closure8$_closure12.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$_notFound_closure8$_closure12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$_notFound_closure8$_closure13.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$_notFound_closure8$_closure13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$_notFound_closure8.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController$_notFound_closure8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController.class" afterPath="$PROJECT_DIR$/target/classes/brainsoup/ProjectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Brainsoup.iml" afterPath="$PROJECT_DIR$/.idea/Brainsoup.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/brainsoup/AccountController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/brainsoup/AccountController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/brainsoup/LoginController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/brainsoup/LoginController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/brainsoup/MemberController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/brainsoup/MemberController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/brainsoup/ProjectController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/brainsoup/ProjectController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/brainsoup/Account.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/brainsoup/Account.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/sbadmin.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/sbadmin.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/member/profile.gsp" afterPath="$PROJECT_DIR$/grails-app/views/member/profile.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/project/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/project/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
     </list>
     <ignored path="Brainsoup.iws" />
@@ -72,8 +48,8 @@
       <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.857143">
-              <caret line="93" column="75" selection-start-line="93" selection-start-column="75" selection-end-line="93" selection-end-column="75" />
+            <state vertical-scroll-proportion="-8.336843">
+              <caret line="96" column="58" selection-start-line="96" selection-start-column="58" selection-end-line="96" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -82,18 +58,18 @@
       <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/project/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.432836">
-              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+            <state vertical-scroll-proportion="2.3880596">
+              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.24248497">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,18 +78,18 @@
       <file leaf-file-name="AccountController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/brainsoup/AccountController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.846154">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+            <state vertical-scroll-proportion="-17.923077">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/project/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23305085">
-              <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+            <state vertical-scroll-proportion="-5.296296">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -139,13 +115,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="sbadmin.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/sbadmin.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.642857">
+              <caret line="81" column="134" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="134" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Authentication_from_all_solved" />
+        <entry key="$PROJECT_DIR$" value="Login_fixed_Logo_und_angepasstes_menue" />
       </map>
     </option>
   </component>
@@ -192,17 +178,17 @@
         <option value="$PROJECT_DIR$/web-app/sbadmin/css/sb-admin.css" />
         <option value="$PROJECT_DIR$/grails-app/domain/brainsoup/Login.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/login/logout.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/brainsoup/MemberController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/brainsoup/ProjectController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/login/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/brainsoup/LoginController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/brainsoup/Account.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/member/profile.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/sbadmin.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/project/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/brainsoup/AccountController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
       </list>
     </option>
   </component>
@@ -1038,7 +1024,7 @@
       <workItem from="1466071544952" duration="15100000" />
       <workItem from="1466100448477" duration="698000" />
       <workItem from="1466163764766" duration="5564000" />
-      <workItem from="1466351903243" duration="11101000" />
+      <workItem from="1466351903243" duration="16351000" />
     </task>
     <task id="LOCAL-00001" summary="BootStrap mit Member&#10;">
       <created>1466073695609</created>
@@ -1136,11 +1122,17 @@
       <option name="project" value="LOCAL" />
       <updated>1466357736086</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Logout und Authenticat von ueberall&#10;">
+      <created>1466418910939</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1466418910939</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53108000" />
+    <option name="totallyTimeSpent" value="58358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3226" height="1746" extended-state="6" />
@@ -1531,30 +1523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/member/profile.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0370371">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.857143">
-          <caret line="93" column="75" selection-start-line="93" selection-start-column="75" selection-end-line="93" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/sbadmin.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35833332">
-          <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/brainsoup/LoginController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.461538">
@@ -1563,34 +1531,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/project/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state vertical-scroll-proportion="-5.296296">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/member/profile.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0370371">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/project/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.432836">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        <state vertical-scroll-proportion="2.3880596">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/sbadmin.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.642857">
+          <caret line="81" column="134" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.336843">
+          <caret line="96" column="58" selection-start-line="96" selection-start-column="58" selection-end-line="96" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/brainsoup/AccountController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.846154">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        <state vertical-scroll-proportion="-17.923077">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/project/show.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23305085">
-          <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.24248497">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -23,11 +23,7 @@ class AccountController {
             java.util.Date d = new java.util.Date(session.getLastAccessedTime())    // Datum des letzten Besuchs.
             session.Account = Account;                                              // der Session den Aktuellen Account zuweisen.
             session.Member  = Member.findByUser(session.Account)                    // ueber Account den Member der Session zuweisen
-            /*def Projetcs = {
-                Project.findByMember(session.Member)
-            }
-            session.Project = Projects                                              // uber Member die Project(e) zuweisen
-*/
+            session.Project = Project.findByMember(session.Member)                   // uber Member die Project(e) zuweisen
 
             flash.message = "Hallo, ${Account.username}! (Zuletzt eingeloggt: ${d}) "
             Account.setActive(true)

@@ -80,50 +80,38 @@
 			}
 		</style>
 	</head>
-		<div id="status" role="complementary">
-			<h1>so schauts aus:</h1>
-			<ul>
-				<li>Dein Name: ${session.Account.username}</li>
-				<li>zuletzt eingeloggt: <g:formatDate format="yyyy-MM-dd" date="${session.lastAccessedTime}"/></li>
-				<g:if test="${session.Project != null}">
-					</><li>Anzahl Projekte: ${session.Project.count()}</li>
-				</g:if>
-				<g:if test="${session.Project == null}">
-					</><li>Anzahl Projekte: none</li>
-				</g:if>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Willkommen bei Brainsoup</h1>
-			<p>likagewlkfagwsif salkfdglksa dflksa fdLOREM isadfkjgsadlkjgsagdfkagsdfa
-			savfsasa
-			gv
-			s
-			gvsd
-			f
+<g:if test="${session.Account}">
+	<div id="status" role="complementary">
+		<h1>Hello ${session.Account.username} !</h1>
+		<p>(last time logged in: </br><g:formatDate format="dd.MM.yyyy" date="${session.lastAccessedTime}"/>)</p>
+		<ul>
+		<g:if test="${session.Project != null}">
+			</><li>Projects: ${session.Project.count()}</li>
+		</g:if>
+		<g:if test="${session.Project == null}">
+			</><li>Projects: none</li>
+		</g:if>
+		<a href="${createLink(action: 'index', controller: 'project')}"></br><h1> My Projects </h1></a>
+		</ul>
+		<ul>
+			<g:each var="project" in="${session.Project}">
+				<li>${project.name} - ${project.genre}</li>
+			</g:each>
+		</ul>
+	</div>
+</g:if>
+<div id="page-body" role="main">
+	<h1>Welcome at Brainsoup</h1>
+	<p>You can create your Project an discover other ones.</p>
 
-			shgfdksdhghsdkfhgkdshfgk TADAAA!</p>
-
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</body>
+	<div id="controller-list" role="navigation">
+		<h2>Available Controllers:</h2>
+		<ul>
+			<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+				<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+			</g:each>
+		</ul>
+	</div>
+</div>
+</body>
 </html>
