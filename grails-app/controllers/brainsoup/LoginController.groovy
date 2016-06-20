@@ -15,7 +15,7 @@ class LoginController {
         }
         else{
             redirect(controller:'login',action:'index')
-            flash.message = "Da lief irgendetwas falsche :(s"
+            flash.message = "Da lief irgendetwas falsche :( "
         }
     }
     def logout ={

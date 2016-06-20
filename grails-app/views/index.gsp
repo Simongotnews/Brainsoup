@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main"/>
+		<meta name="layout" content="sbadmin"/>
 		<title>Brainsoup</title>
 		<style type="text/css" media="screen">
 			#status {
@@ -80,13 +80,17 @@
 			}
 		</style>
 	</head>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
 			<h1>so schauts aus:</h1>
 			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
+				<li>Dein Name: ${session.Account.username}</li>
+				<li>zuletzt eingeloggt: <g:formatDate format="yyyy-MM-dd" date="${session.lastAccessedTime}"/></li>
+				<g:if test="${session.Project != null}">
+					</><li>Anzahl Projekte: ${session.Project.count()}</li>
+				</g:if>
+				<g:if test="${session.Project == null}">
+					</><li>Anzahl Projekte: none</li>
+				</g:if>
 				<li>JVM version: ${System.getProperty('java.version')}</li>
 				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
 				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>

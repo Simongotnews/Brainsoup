@@ -20,6 +20,10 @@ class ProjectController {
     }
 
     def create() {
+        if(!session.user) {
+            redirect(controller:'login',action:'index')
+            flash.message = "Login erforderlich"
+        }
         respond new Project(params)
     }
 

@@ -20,7 +20,7 @@ class MemberController {
     }
 
     def profile() {
-        show(session.member)
+        respond session.Member, model:[Member: session.Member]
     }
 
     def index(Integer max) {

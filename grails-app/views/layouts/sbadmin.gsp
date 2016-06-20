@@ -38,7 +38,7 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 <!-- veraendert -->
 
-			<img style="padding-top: 10px"  href="${createLink(action: 'member', controller:'profile')}" src="${request.contextPath}/sbadmin/images/Brainsoup_LOGO_25x44.png" alt="Logo">
+			<img style="padding-top: 10px"  href="${createLink(action: 'index', controller:'Brainsoup')}" src="${request.contextPath}/sbadmin/images/Brainsoup_LOGO_25x44.png" alt="Logo">
 
 <!--    		-->
 		<div class="navbar-header">
@@ -48,7 +48,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${createLink(action: 'profile', controller:'member')}">Brainsoup</a>
+			<a class="navbar-brand" href="${request.contextPath}/">Brainsoup</a>
 		</div>
 		<!-- Top Menu Items -->
 		<ul class="nav navbar-right top-nav">
@@ -69,7 +69,7 @@
 		</g:if>
 		<g:if test="${session.Account != null}">
 				<div class="log_header">
-					<label style="font-family: 'Comic Sans MS'; font-size: 10em; font-size: large; color: red">Hallo ${session.Account.username} :)  </label>
+					<label style="font-family: 'Comic Sans MS'; font-size: 10em; font-size: large; color: red">Hallo ${session.Account.username} :)    </label>
 				</span>
 			</div>
 		</g:if>
