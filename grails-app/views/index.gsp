@@ -6,9 +6,13 @@
 		<g:set var="entityName" value="${message(code: 'project.label', default: 'Project')}" />
 		<title>Brainsoup</title>
 		<style type="text/css" media="screen">
+			body, tbody{
+				background-color: #444444;
+				color: #a4a4a4;
+			}
 			#status {
-				background-color: #fff;
-				border: .2em solid #fff;
+				background-color: #242325;
+				border: .3em solid #fff;
 				margin: 2em 2em 1em;
 				padding: 1em;
 				width: 12em;
@@ -27,6 +31,7 @@
 
 			#status ul {
 				font-size: 0.9em;
+				color: #a4a4a4;
 				list-style-type: none;
 				margin-bottom: 0.6em;
 				padding: 0;
@@ -43,6 +48,7 @@
 			}
 
 			#page-body {
+				background-color: #444444;
 				margin: 2em 1em 1.25em 18em;
 			}
 
@@ -87,26 +93,24 @@
 		<h1>Hello ${session.Account.username} !</h1>
 		<p>(last time logged in: </br><g:formatDate format="dd.MM.yyyy" date="${session.lastAccessedTime}"/>)</p>
 		<ul>
-		<g:if test="${session.Project != null}">
-			</><li>Projects: ${session.Project.count()}</li>
-		</g:if>
-		<g:if test="${session.Project == null}">
-			</><li>Projects: none</li>
-		</g:if>
-		<a href="${createLink(action: 'index', controller: 'project')}"></br><h1> My Projects </h1></a>
+			<g:if test="${session.Project != null}">
+				</><li>Projects: ${session.Project.count()}</li>
+			</g:if>
+			<g:if test="${session.Project == null}">
+				</><li>Projects: none</li>
+			</g:if>
+			<a href="${createLink(action: 'index', controller: 'project')}"></br><h1> My Projects </h1></a>
 		</ul>
 		<ul>
 			<g:each var="project" in="${Project.findAllByMember(session.Member)}">
-				<li>${project.name} - ${project.genre}</li>
+				<li>${project.name} (${project.genre})</li>
 			</g:each>
-
 		</ul>
 	</div>
 </g:if>
 <div id="page-body" role="main">
 	<h1>Welcome at Brainsoup</h1>
 	<p>You can create your Project and discover other ones.</p>
-
 	<div id="controller-list" role="navigation">
 		<h2>Other Projects:</h2>
 		<ul>

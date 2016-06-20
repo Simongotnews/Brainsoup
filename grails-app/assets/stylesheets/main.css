@@ -37,7 +37,7 @@ html * {
 }
 
 body {
-	background: #ffffff;
+	background: #444444;
 	color: #333333;
 	margin: 0 auto;
 	max-width: 960px;
@@ -406,7 +406,7 @@ table {
 }
 
 tr {
-	border: 0;
+	border: 1;
 }
 
 tr>td:first-child, tr>th:first-child {

@@ -16,13 +16,9 @@
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
 	</head>
-	<body>
-	    <h1>test test tes ttetsttetegksdfksakfg</h1>
-
-
+	<body style="background-color: #444444">
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-
 	</body>
 </html>

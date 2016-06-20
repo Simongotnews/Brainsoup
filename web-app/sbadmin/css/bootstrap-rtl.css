@@ -842,6 +842,7 @@ blockquote.pull-left {
   }
 }
 th {
+  border: 2em;
   text-align: right;
 }
 @media screen and (max-width: 767px) {
