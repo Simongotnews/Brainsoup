@@ -32,10 +32,10 @@ class ProjectController {
             respond projectInstance.errors, view:'create'
             return
         }
-/*  Aendereungen der Instanzvariablen ab hier  */
+/*  Aendereungen der Instanzvariablen ab hier   */
 
         projectInstance.member = session.Member
-        projectInstance.rating = " "
+/*         projectInstance.rating = "none"
         projectInstance.written = new java.util.Date()
 
 /* Ende der Aenderungen der Instanzvariablen   */

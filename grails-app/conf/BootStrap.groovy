@@ -20,6 +20,11 @@ class BootStrap {
                     new ProjectPage(longDescription: "Der Aufsteller sollte aus robusten Material gebaut werden.", instructions: "1. Materialien besorgen. 2. Zusammenbauen. 3. Aufstellen.", picture: "/sbadmin/images/RoboPi_1.JPG", project: 3).save()
                     new ProjectPage(longDescription: "Es sollte alles der Reihe nach gebaut werden nicht durcheinander", instructions: "(Tipp: Es kann auch gerne Holz verwendet werden", picture: "/sbadmin/images/RoboPi_2.JPG", project: 3).save()
 
+                new Project(name: "Baumhaus", rating: "4", shortDescription: "Ein kleines Baumhaus für fast jeden Baum", genre: "Holzbau", recension: "klein aber komfortabel", written:  new java.util.Date()-1000, member: 2).save()
+                    new ProjectPage(longDescription: "Zuerst einmal in den Baummarkt und alle Materialien zuschneiden lassen auf die benötigten größen", instructions: "den Unterbau zwischen einer astgabelung anbringen", picture: "/sbadmin/images/baumhaus1.jpg", project: 4).save()
+                    new ProjectPage(longDescription: "die Decken stützen auf dem Unterbau verschrauben", instructions: "Die Seitenverkleidungen an den Dachstützen anschrauben", picture: "/sbadmin/images/baumhaus2.jpg", project: 4).save()
+                    new ProjectPage(longDescription: "Dachkonstruktion", instructions: "Zwischen den Deckenstützen querlatten verschrauben und darauf Wellblech anbringen", project: 4).save()
+
     }
     def destroy = {
     }

@@ -3,7 +3,7 @@ package brainsoup
 class Project {
 
     String name;
-    String rating;
+    int rating;
     String shortDescription;
     String genre;
     String recension;
@@ -19,12 +19,12 @@ class Project {
     }
 
     String toString() {
-        return "$name (Genre:$genre Rating:$rating)"
+        return "$name"
     }
 
     static constraints = {
         name(blank:false, matches: "[a-zA-Z]+")
-        rating(nullable:true, blank:true)
+        rating(nullable:true)
         shortDescription(blank:false, maxSize: 50)
         genre(blank:false)
         recension(nullable:true, blank:false)

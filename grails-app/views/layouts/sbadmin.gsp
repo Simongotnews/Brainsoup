@@ -77,7 +77,7 @@
 						<li class="divider"></li>
 						<g:if test="${session.Account != null}">
 							<li>
-								<a href="${createLink(action: 'login', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
+								<a href="${createLink(action: 'logout', controller:'login')}"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
 							</li>
 						</g:if>
 						<g:if test="${session.Account == null}">
