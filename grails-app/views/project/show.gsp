@@ -14,7 +14,7 @@
 
 				<g:each in="${ProjectPage.findAllByProject(projectInstance)}" status="i" var="page">
 					</br><p>${page.longDescription}</p>
-					</br><img href="${createLink(action: 'index', controller:'Brainsoup')}" src="${request.contextPath}/sbadmin/images/Brainsoup_LOGO_25x44.png" alt="Logo">
+					</br><img style="width: 400px" href="${createLink(action: 'index', controller:'Brainsoup')}" src="${request.contextPath}${page.picture}" alt="Picture">
 					</br><p>${page.instructions}</p>
 
 				</g:each>

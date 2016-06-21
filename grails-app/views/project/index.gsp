@@ -14,10 +14,10 @@
 		<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 		</g:if>
-		<g:if test="${session.Project == null}">
+		<g:if test="${Project.findAllByMember(session.Member) == null}">
 			You have no Projects.
 		</g:if>
-		<g:if test="${session.Project != null}">
+		<g:if test="${session.Account != null}">
 			<table>
 				<thead>
 					<tr>

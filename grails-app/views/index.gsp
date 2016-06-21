@@ -109,19 +109,17 @@
 	</div>
 </g:if>
 <div id="page-body" role="main">
-	<h1>Welcome at Brainsoup</h1>
-	<p>You can create your Project and discover other ones.</p>
+	<h1 style="font-size: 80px">Welcome at Brainsoup</h1>
+	<p style="font-size: 40px">You can create your Project and discover other ones.</p>
 	<div id="controller-list" role="navigation">
-		<h2>Other Projects:</h2>
-		<ul>
-			<table>
-				<tbody>
-				<g:each var="project" in="${Project.findAll()}">
-					<li><g:link controller="project" action="show" id="${project.id}"> ${project.name} (${project.genre}) </g:link></li>
-				</g:each>
-				</tbody>
-			</table>
-		</ul>
+		<h2 style="font-size: 30px">Recommended Projects:</h2>
+		<table>
+			<tbody>
+			<g:each var="project" in="${Project.findAll()}">
+				<g:link style="font-size: 20px" controller="project" action="show" id="${project.id}"> ${project.name} (${project.genre}), </g:link>
+			</g:each>
+			</tbody>
+		</table>
 	</div>
 </div>
 </body>
