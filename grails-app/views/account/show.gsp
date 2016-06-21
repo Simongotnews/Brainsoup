@@ -24,21 +24,15 @@
 				<g:if test="${accountInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="account.password.label" default="Password" /></span>
-					
 						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${accountInstance}" field="password"/></span>
-					
 				</li>
 				</g:if>
-
 				<g:if test="${accountInstance?.active}">
 				<li class="fieldcontain">
 					<span id="active-label" class="property-label"><g:message code="account.active.label" default="Active" /></span>
-
 						<span class="property-value" aria-labelledby="active-label"><g:formatBoolean boolean="${accountInstance?.active}" /></span>
-
 				</li>
 				</g:if>
-
 			</ol>
 			<g:form url="[resource:accountInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
