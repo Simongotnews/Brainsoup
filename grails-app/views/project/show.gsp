@@ -3,21 +3,24 @@
 <html>
 	<head>
 		<meta name="layout" content="sbadmin">
-		<title>${session.Account.username}´s Projects</title>
+		<title>Brainsoup</title>
 	</head>
 	<body>
 		<g:if test="${session.Account != null}">
 			<div id="show-project" class="content scaffold-show" role="main">
+<!--
+				<g:set var="currentProject" value="${projectInstance}" /> 				////Project current wird angelegt
+-->
 				<h1>${projectInstance.name} (${projectInstance.genre})</h1>
 				<h4><g:formatDate format="dd.MM.yyyy" date="${projectInstance.written}"/> made by ${session.Account.username}</h4>
 				</br><p>${projectInstance.shortDescription}</p>
-
 				<g:each in="${ProjectPage.findAllByProject(projectInstance)}" status="i" var="page">
 					</br><p>${page.longDescription}</p>
 					</br><img style="width: 400px" href="${createLink(action: 'index', controller:'Brainsoup')}" src="${request.contextPath}${page.picture}" alt="Picture">
 					</br><p>${page.instructions}</p>
-
 				</g:each>
+
+					<b><g:link class="create" action="create" controller="projectPage" resource="${projectPage}"><g:message code="default.button.create.label" default="Create" /></g:link></b>
 
 				<g:form url="[resource:projectInstance, action:'delete']" method="DELETE">
 					<fieldset class="buttons">

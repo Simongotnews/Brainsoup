@@ -18,10 +18,6 @@ class ProjectController {
     }
 
     def create() {
-        if(!session.user) {
-            redirect(controller:'login',action:'index')
-            flash.message = "Login erforderlich"
-        }
         respond new Project(params)
     }
 
@@ -36,6 +32,13 @@ class ProjectController {
             respond projectInstance.errors, view:'create'
             return
         }
+/*  Aendereungen der Instanzvariablen ab hier  */
+
+        projectInstance.member = session.Member
+        projectInstance.rating = " "
+        projectInstance.written = new java.util.Date()
+
+/* Ende der Aenderungen der Instanzvariablen   */
 
         projectInstance.save flush:true
 

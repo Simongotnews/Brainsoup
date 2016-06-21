@@ -28,7 +28,7 @@
 	<g:textField name="picture" required="" value="${projectPageInstance?.picture}"/>
 
 </div>
-
+<!--
 <div class="fieldcontain ${hasErrors(bean: projectPageInstance, field: 'project', 'error')} required">
 	<label for="project">
 		<g:message code="projectPage.project.label" default="Project" />
@@ -36,5 +36,5 @@
 	</label>
 	<g:select id="project" name="project.id" from="${brainsoup.Project.list()}" optionKey="id" required="" value="${projectPageInstance?.project?.id}" class="many-to-one"/>
 
-</div>
+</div>-->
 

@@ -34,7 +34,11 @@ class ProjectPageController {
             respond projectPageInstance.errors, view:'create'
             return
         }
+/* Aenderungen ab hier */
 
+        projectPageInstance.project = currentProject
+
+/*                      */
         projectPageInstance.save flush:true
 
         request.withFormat {

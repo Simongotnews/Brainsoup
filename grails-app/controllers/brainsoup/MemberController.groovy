@@ -33,12 +33,6 @@ class MemberController {
     }
 
     def create() {
-        //def newMember = new Member(params)
-        //newMember.setUser(session.getAttribute("user"))
-        //newMember.save()
-        //def currentAccount = new Account()
-        //session["user"] = currentAccount
-        //respond newMember
         respond new Project(params)
     }
 
@@ -53,7 +47,11 @@ class MemberController {
             respond memberInstance.errors, view:'create'
             return
         }
+/*              veraendert                  */
 
+
+
+/*                                          */
         memberInstance.save flush:true
 
         request.withFormat {

@@ -70,10 +70,9 @@
 		<g:message code="member.user.label" default="User" />
 		<span class="required-indicator">*</span>
 	</label>
-<!--
+	<!--
 	<g:select id="user" name="user.id" from="${brainsoup.Account.list()}" optionKey="id" required="" value="${memberInstance?.user?.id}" class="many-to-one"/>
--->
+	-->
 	<g:select id="user" name="user.id" from="${session.getAttribute(user)}" optionKey="id" required="" value="${memberInstance?.user?.id}" class="many-to-one"/>
 
 </div>
-
