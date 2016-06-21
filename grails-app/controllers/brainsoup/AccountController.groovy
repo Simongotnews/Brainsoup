@@ -23,12 +23,11 @@ class AccountController {
             java.util.Date d = new java.util.Date(session.getLastAccessedTime())    // Datum des letzten Besuchs.
             session.Account = Account;                                              // der Session den Aktuellen Account zuweisen.
             session.Member  = Member.findByUser(session.Account)                    // ueber Account den Member der Session zuweisen
-            session.Project = Project.findByMember(session.Member)                   // uber Member die Project(e) zuweisen
 
             flash.message = "Hallo, ${Account.username}! (Zuletzt eingeloggt: ${d}) "
             Account.setActive(true)
             Account.save()
-            redirect(controller:"member", action:"index")
+            redirect(controller:"member", action:"profile")
         }else{
             flash.message = "Entschuldigung, ${params.username}. Versuche es nocheinmal."
             redirect(action:"login")        //normal: action:"login"
@@ -55,15 +54,19 @@ class AccountController {
     }
 
     def show(Account accountInstance) {
-        flash.message = "Profil von ${session.Account.username}"
-        respond accountInstance
+        if(session.Account != null)
+        {
+            redirect(controller:"member", action:"create")
+        }
+        if(session.Account)
+        {
+            flash.message = "Profil von ${session.Account.username}"
+            respond accountInstance
+        }
     }
 
     def create(){
-        //session.Member.user = respond Project(params)
         respond new Account(params)
-
-        //redirect(controller:"member", action:"index")
     }
 
     @Transactional

@@ -80,6 +80,11 @@
 								<a href="${createLink(action: 'login', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
 							</li>
 						</g:if>
+						<g:if test="${session.Account == null}">
+							<li>
+								<a href="${createLink(action: 'create', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Sign Up </a>
+							</li>
+						</g:if>
 					</ul>
 				</li>
 			</ul>
@@ -100,6 +105,12 @@
 							<a href="${createLink(action: 'logout', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
 						</g:if>
 					</li>
+					<li>		<!-- fa fa-fw fa-bar-chart-o für Chartdiagramm -->
+						<g:if test="${session.Account == null}">
+							<a href="${createLink(action: 'create', controller:'account')}"><i class="fa fa-fw fa-power-off"></i> Sign Up </a>
+						</g:if>
+					</li>
+
 					<!--
 					<li>
 						<a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
@@ -127,14 +138,9 @@
 			<!-- /.navbar-collapse -->
 		</nav>
 		<div id="page-wrapper">
-			<g:if test="${session.Account != null}">
-				<div style="background-color: #444444">
-					<g:layoutBody/>
-				</div>
-			</g:if>
-			<g:if test="${session.Account == null}">
-				<a href="${createLink(action: 'doLogin', controller:'login')}">Sorry you need to be logged in!</a>
-			</g:if>
+
+				<g:layoutBody/>
+
 		</div>
 		<!-- /#page-wrapper -->
 	</div>
