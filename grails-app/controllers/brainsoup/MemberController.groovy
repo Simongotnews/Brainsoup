@@ -1,7 +1,5 @@
 package brainsoup
 
-
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -9,15 +7,6 @@ import grails.transaction.Transactional
 class MemberController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
-    def bind(Account accountInstance){
-        def newMember = new Member(params)
-        newMember.setUser(session.Account)
-        //newMember.save()
-        def currentAccount = new Account()
-        session["user"] = currentAccount
-        respond newMember
-    }
 
     def profile() {
         respond session.Member, model:[Member: session.Member]
@@ -33,13 +22,7 @@ class MemberController {
     }
 
     def create() {
-        //def newMember = new Member(params)
-        //newMember.setUser(session.getAttribute("user"))
-        //newMember.save()
-        //def currentAccount = new Account()
-        //session["user"] = currentAccount
-        //respond newMember
-        respond new Project(params)
+        respond new Member(params)
     }
 
     @Transactional
@@ -53,6 +36,8 @@ class MemberController {
             respond memberInstance.errors, view:'create'
             return
         }
+
+        memberInstance.user = accountInstance
 
         memberInstance.save flush:true
 

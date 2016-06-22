@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="sbadmin">
+		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'member.label', default: 'Member')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
