@@ -77,18 +77,24 @@ class AccountController {
         }
 
         if (accountInstance.hasErrors()) {
-            respond accountInstance.errors, view:'create'
+            respond accountInstance.errors, view: 'create'
             return
         }
 
-        accountInstance.save flush:true
+        accountInstance.save flush: true
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'account.label', default: 'Account'), accountInstance.id])
-                redirect accountInstance
+        if (Member.findByUser(accountInstance) == null) {
+            redirect(controller: "member", action: "create")
+        }
+
+        if(Member.findByUser(accountInstance)){
+            request.withFormat {
+                form multipartForm {
+                    flash.message = message(code: 'default.created.message', args: [message(code: 'account.label', default: 'Account'), accountInstance.id])
+                    redirect accountInstance
+                }
+                '*' { respond accountInstance, [status: CREATED] }
             }
-            '*' { respond accountInstance, [status: CREATED] }
         }
     }
 

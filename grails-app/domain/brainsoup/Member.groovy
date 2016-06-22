@@ -24,11 +24,11 @@ class Member {
     }
 
     static constraints = {
-        title(nullable:false, inList: ["Herr", "Frau"])
+        title(nullable:true, blank:true, inList: ["Herr", "Frau"])
         firstName(blank:false, matches:"[a-zA-Z]+")
         lastName(blank:false, matches:"[a-zA-Z]+")
         dateOfBirth(nullable:true, max:new java.util.Date())
         email(nullable:true, email:true)
-        user(unique:true)
+        user(nullable:true, unique:true)
     }
 }

@@ -23,12 +23,12 @@ class Project {
     }
 
     static constraints = {
-        name(blank:false, matches: "[a-zA-Z]+")
+        name(blank:false)
         rating(nullable:true)
         shortDescription(blank:false, maxSize: 50)
         genre(blank:false)
         recension(nullable:true, blank:false)
-        written(nullable:true, max:new java.util.Date())
+        written(nullable:true)
         member(nullable:true)
     }
 }

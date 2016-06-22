@@ -1,7 +1,5 @@
 <%@ page import="brainsoup.Member" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'title', 'error')} required">
 	<label for="title">
 		<g:message code="member.title.label" default="Title" />
@@ -32,7 +30,7 @@
 <div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'dateOfBirth', 'error')} ">
 	<label for="dateOfBirth">
 		<g:message code="member.dateOfBirth.label" default="Date Of Birth" />
-		
+
 	</label>
 	<g:datePicker name="dateOfBirth" precision="day"  value="${memberInstance?.dateOfBirth}" default="none" noSelection="['': '']" />
 
@@ -41,7 +39,7 @@
 <div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'email', 'error')} ">
 	<label for="email">
 		<g:message code="member.email.label" default="Email" />
-		
+
 	</label>
 	<g:field type="email" name="email" value="${memberInstance?.email}"/>
 
@@ -50,17 +48,17 @@
 <div class="fieldcontain ${hasErrors(bean: memberInstance, field: 'project', 'error')} ">
 	<label for="project">
 		<g:message code="member.project.label" default="Project" />
-		
+
 	</label>
-	
-<ul class="one-to-many">
-<g:each in="${memberInstance?.project?}" var="p">
-    <li><g:link controller="project" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="project" action="create" params="['member.id': memberInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'project.label', default: 'Project')])}</g:link>
-</li>
-</ul>
+
+	<ul class="one-to-many">
+		<g:each in="${memberInstance?.project?}" var="p">
+			<li><g:link controller="project" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
+		</g:each>
+		<li class="add">
+			<g:link controller="project" action="create" params="['member.id': memberInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'project.label', default: 'Project')])}</g:link>
+		</li>
+	</ul>
 
 
 </div>
@@ -76,3 +74,4 @@
 	<g:select id="user" name="user.id" from="${session.getAttribute(user)}" optionKey="id" required="" value="${memberInstance?.user?.id}" class="many-to-one"/>
 
 </div>
+

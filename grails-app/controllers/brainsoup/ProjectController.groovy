@@ -41,9 +41,8 @@ class ProjectController {
 /*  Aendereungen der Instanzvariablen ab hier   */
 
         projectInstance.member = session.Member
-        projectInstance.written = new jave.util.Date()
-/*        projectInstance.rating = null*/
-   /*     projectInstance.written = new java.util.Date()*/
+/*      projectInstance.rating = null       */
+        projectInstance.written = java.util.Date()
 
 /* Ende der Aenderungen der Instanzvariablen   */
 
