@@ -3,12 +3,13 @@ package brainsoup
 class LoginController {
     def index() {
         if(session.Account) {
-            redirect(controller:'member',action:'index')
+            redirect(controller:'member',action:'profile')
         }
     }
     def doLogin ={
         def user = Account.findWhere(username:params['username'],password:params['password'])
         session.Account = user
+        def currentProjectId = 0
         session.Member = Member.findByUser(session.Account)
         if (user){
             redirect(controller:'member',action:'profile')

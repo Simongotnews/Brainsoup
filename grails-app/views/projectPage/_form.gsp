@@ -1,7 +1,5 @@
 <%@ page import="brainsoup.ProjectPage" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: projectPageInstance, field: 'longDescription', 'error')} required">
 	<label for="longDescription">
 		<g:message code="projectPage.longDescription.label" default="Long Description" />

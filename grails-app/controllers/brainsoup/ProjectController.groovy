@@ -1,5 +1,7 @@
 package brainsoup
 
+
+import grails.util.Holders
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -20,7 +22,11 @@ class ProjectController {
     def create() {
         respond new Project(params)
     }
-
+/*
+    public static void setProjectId(int newId){
+        grailsApplication.config.setProperty(currentProjectId, newId)
+    }
+*/
     @Transactional
     def save(Project projectInstance) {
         if (projectInstance == null) {
@@ -35,8 +41,9 @@ class ProjectController {
 /*  Aendereungen der Instanzvariablen ab hier   */
 
         projectInstance.member = session.Member
-/*         projectInstance.rating = "none"
-        projectInstance.written = new java.util.Date()
+        projectInstance.written = new jave.util.Date()
+/*        projectInstance.rating = null*/
+   /*     projectInstance.written = new java.util.Date()*/
 
 /* Ende der Aenderungen der Instanzvariablen   */
 

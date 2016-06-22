@@ -1,7 +1,6 @@
 package brainsoup
 
-
-
+import grails.util.Holders
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -36,7 +35,9 @@ class ProjectPageController {
         }
 /* Aenderungen ab hier */
 
-        projectPageInstance.project = currentProject
+        def grailsApplication = Holders.getGrailsApplication()
+
+        projectPageInstance.project = Project.findById(grailsApplication.config.currentProjectId)
 
 /*                      */
         projectPageInstance.save flush:true

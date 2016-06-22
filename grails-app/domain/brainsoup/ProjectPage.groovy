@@ -16,5 +16,6 @@ class ProjectPage {
     static constraints = {
         longDescription(blank:false)
         instructions(blank:false)
+        project(nullable:true)
     }
 }
