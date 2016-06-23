@@ -1,6 +1,6 @@
 package brainsoup
 
-
+import java.util.*
 import grails.util.Holders
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -42,7 +42,7 @@ class ProjectController {
 
         projectInstance.member = session.Member
 /*      projectInstance.rating = null       */
-        projectInstance.written = java.util.Date()
+        projectInstance.written = new java.util.Date()-1
 
 /* Ende der Aenderungen der Instanzvariablen   */
 

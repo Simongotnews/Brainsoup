@@ -96,9 +96,7 @@
 			<g:if test="${session.Project != null}">
 				</><li>Projects: ${session.Project.count()}</li>
 			</g:if>
-			<g:if test="${session.Project == null}">
-				</><li>Projects: none</li>
-			</g:if>
+
 			<a href="${createLink(action: 'index', controller: 'project')}"></br><h1> My Projects </h1></a>
 		</ul>
 		<ul>

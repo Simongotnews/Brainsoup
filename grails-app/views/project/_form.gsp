@@ -7,13 +7,13 @@
 	</label>
 	<g:textField name="name" style="margin-left: 83px;" pattern="${projectInstance.constraints.name.matches}" required="" value="${projectInstance?.name}"/>
 </div>
-<div class="fieldcontain ${hasErrors(bean: projectInstance, field: 'rating', 'error')} required">
+<!--<div class="fieldcontain ${hasErrors(bean: projectInstance, field: 'rating', 'error')} required">
 	<label for="rating">
 		<g:message code="project.rating.label" default="Rating" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="rating" style="margin-left: 78px;" required="" value="${projectInstance?.rating}"/>
-</div>
+</div>-->
 <div class="fieldcontain ${hasErrors(bean: projectInstance, field: 'shortDescription', 'error')} required">
 	<label for="shortDescription">
 		<g:message code="project.shortDescription.label" default="Short Description" />

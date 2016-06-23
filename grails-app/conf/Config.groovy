@@ -86,6 +86,7 @@ grails.hibernate.pass.readonly = false
 grails.hibernate.osiv.readonly = false
 
 currentProjectId = 2345                                                                                                // verendert ab hier...!
+currentAccountId = 777
 
 environments {
     development {

@@ -28,7 +28,7 @@ class Project {
         shortDescription(blank:false, maxSize: 50)
         genre(blank:false)
         recension(nullable:true, blank:false)
-        written(nullable:true)
+        written(nullable:true, max:new java.util.Date())
         member(nullable:true)
     }
 }

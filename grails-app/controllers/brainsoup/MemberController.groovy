@@ -1,5 +1,6 @@
 package brainsoup
 
+import grails.util.Holders
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -36,9 +37,12 @@ class MemberController {
             respond memberInstance.errors, view:'create'
             return
         }
+/*                                                                              */
+        def grailsApplication = Holders.getGrailsApplication()
 
-        memberInstance.user = accountInstance
+        memberInstance.user = Account.findById(grailsApplication.config.currentAccountId)
 
+/*                                                                              */
         memberInstance.save flush:true
 
         request.withFormat {

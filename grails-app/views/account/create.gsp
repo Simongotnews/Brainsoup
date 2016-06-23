@@ -18,6 +18,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
+
 			<g:form url="[resource:accountInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
